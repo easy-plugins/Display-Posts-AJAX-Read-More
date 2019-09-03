@@ -16,7 +16,7 @@
  * Author URI:        https://connections-pro.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       display-posts-shortcode-ajax-read-more-search
+ * Text Domain:       easy-plugins-display-posts-ajax-read-more
  * Domain Path:       /languages
  */
 
