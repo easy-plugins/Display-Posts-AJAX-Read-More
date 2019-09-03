@@ -196,16 +196,17 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 		}
 
 		/**
-		 * Callback for the `display_posts_shortcode_args` filter.
+		 * Callback for the `shortcode_atts_display-post` filter.
 		 *
 		 * @since 1.0
 		 *
-		 * @param array $args          Parsed arguments to pass to WP_Query.
-		 * @param array $original_atts Original attributes passed to the shortcode.
+		 * @param array  $out   The output array of shortcode attributes.
+		 * @param array  $pairs The supported attributes and their defaults.
+		 * @param array  $atts  The user defined shortcode attributes.
 		 *
-		 * @return array mixed
+		 * @return array
 		 */
-		public static function shortcodeArgs( $args, $original_atts, $atts ) {
+		public static function shortcodeArgs( $out, $pairs, $atts ) {
 
 			$options = Display_Posts_AJAX_Read_More()->shortcodeAtts( $atts );
 
@@ -215,7 +216,7 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 				wp_enqueue_style( 'dps-ajax-read-more' );
 			}
 
-			return $args;
+			return $out;
 		}
 
 		/**
