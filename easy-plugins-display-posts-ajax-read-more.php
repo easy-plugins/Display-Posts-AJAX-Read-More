@@ -101,7 +101,7 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueScript' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'registerJavaScripts' ) );
-			add_filter( 'display_posts_shortcode_args', array( __CLASS__, 'shortcodeArgs' ), 10, 2 );
+			add_filter( 'shortcode_atts_display-posts', array( __CLASS__, 'shortcodeArgs' ), 10, 3 );
 			add_filter( 'display_posts_shortcode_output', array( __CLASS__, 'addPostID' ), 10, 11 );
 		}
 
@@ -205,9 +205,9 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 		 *
 		 * @return array mixed
 		 */
-		public static function shortcodeArgs( $args, $original_atts ) {
+		public static function shortcodeArgs( $args, $original_atts, $atts ) {
 
-			$options = Display_Posts_AJAX_Read_More()->shortcodeAtts( $original_atts );
+			$options = Display_Posts_AJAX_Read_More()->shortcodeAtts( $atts );
 
 			if ( TRUE === $options['excerpt_more_ajax'] ) {
 
