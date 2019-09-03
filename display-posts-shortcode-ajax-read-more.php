@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Display Posts Shortcode - AJAX Read More
+ * @package   Easy Plugins: Display Posts - AJAX Read More
  * @category  Extension
  * @author    Steven A. Zahm
  * @license   GPL-2.0+
@@ -8,9 +8,9 @@
  * @copyright 2019 Steven A. Zahm
  *
  * @wordpress-plugin
- * Plugin Name:       Display Posts Shortcode - AJAX Read More
+ * Plugin Name:       Easy Plugins: Display Posts - AJAX Read More
  * Plugin URI:        https://connections-pro.com/
- * Description:       An extension for the Display Posts Shortcode plugin which adds support for loading entire post in place when clicking the read more link.
+ * Description:       An extension for the Easy Plugins: Display Posts plugin which adds support for loading entire post in place when clicking the read more link.
  * Version:           1.0
  * Author:            Steven A. Zahm
  * Author URI:        https://connections-pro.com

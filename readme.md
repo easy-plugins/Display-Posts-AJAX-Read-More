@@ -1,10 +1,10 @@
-# Display Posts - AJAX Read More
+# Easy Plugins: Display Posts - AJAX Read More
 
 ## Description
 
-[Display Posts](https://displayposts.com) is the simplest way to query and display content in WordPress.
+[Easy Plugins: Display Posts](https://connections-pro.com) is the simplest way to query and display content in WordPress.
 
-This plugin extends Display Posts by loading the entire post content via an AJAX request and load in place.
+This plugin extends Easy Plugins: Display Posts - AJAX Read Mores by loading the entire post content via an AJAX request and load in place.
 
 ### Parameters
 
