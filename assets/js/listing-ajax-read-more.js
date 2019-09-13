@@ -11,7 +11,7 @@
 		let endpoint = wpApiSettings.root + 'wp/v2/posts/';
 		let item     = me.closest( '.listing-item' );
 		let loading  = item.find( '.dps-arm-loading-overlay' );
-		let meta     = item.find( 'span:first' );
+		let meta     = item.find( '.dps-arm-post-meta' );
 
 		$.ajax( {
 			url:    endpoint + meta.data( 'post-id' ),

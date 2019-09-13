@@ -15,33 +15,86 @@
 	background: rgba( 255, 255, 255, .8 );
 }
 
-.dps-arm-loading {
+.dps-arm-spinner {
+	background-color: #9f9f9f;
+	border-radius: 10px;
+	color: #FFFFFF;
 	display: block;
-	width: 64px;
-	height: 64px;
-	top: 50%;
-	/*left: 50%;*/
-	margin: 0 auto;
 	position: relative;
-	transform: translateY(-50%);
+	width: 76px;
+	height: 76px;
+	margin: 0 auto;
+	padding: 6px;
+	top: calc( 50% - 32px );
 }
-
-.dps-arm-loading:after {
+.dps-arm-spinner div {
+	transform-origin: 32px 32px;
+	animation: lds-spinner 1.2s linear infinite;
+}
+.dps-arm-spinner div:after {
 	content: " ";
 	display: block;
-	width: 46px;
-	height: 46px;
-	margin: 1px;
-	border-radius: 50%;
-	border: 5px solid #9f9f9f;
-	border-color: #9f9f9f transparent #9f9f9f transparent;
-	animation: sat-loading 1.2s linear infinite;
+	position: absolute;
+	top: 3px;
+	left: 29px;
+	width: 5px;
+	height: 14px;
+	border-radius: 20%;
+	background: #fff;
 }
-@keyframes dps-arm-loading {
+.dps-arm-spinner div:nth-child(1) {
+	transform: rotate(0deg);
+	animation-delay: -1.1s;
+}
+.dps-arm-spinner div:nth-child(2) {
+	transform: rotate(30deg);
+	animation-delay: -1s;
+}
+.dps-arm-spinner div:nth-child(3) {
+	transform: rotate(60deg);
+	animation-delay: -0.9s;
+}
+.dps-arm-spinner div:nth-child(4) {
+	transform: rotate(90deg);
+	animation-delay: -0.8s;
+}
+.dps-arm-spinner div:nth-child(5) {
+	transform: rotate(120deg);
+	animation-delay: -0.7s;
+}
+.dps-arm-spinner div:nth-child(6) {
+	transform: rotate(150deg);
+	animation-delay: -0.6s;
+}
+.dps-arm-spinner div:nth-child(7) {
+	transform: rotate(180deg);
+	animation-delay: -0.5s;
+}
+.dps-arm-spinner div:nth-child(8) {
+	transform: rotate(210deg);
+	animation-delay: -0.4s;
+}
+.dps-arm-spinner div:nth-child(9) {
+	transform: rotate(240deg);
+	animation-delay: -0.3s;
+}
+.dps-arm-spinner div:nth-child(10) {
+	transform: rotate(270deg);
+	animation-delay: -0.2s;
+}
+.dps-arm-spinner div:nth-child(11) {
+	transform: rotate(300deg);
+	animation-delay: -0.1s;
+}
+.dps-arm-spinner div:nth-child(12) {
+	transform: rotate(330deg);
+	animation-delay: 0s;
+}
+@keyframes lds-spinner {
 	0% {
-		transform: rotate(0deg);
+		opacity: 1;
 	}
 	100% {
-		transform: rotate(360deg);
+		opacity: 0;
 	}
 }

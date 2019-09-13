@@ -103,6 +103,7 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'registerJavaScripts' ) );
 			add_filter( 'shortcode_atts_display-posts', array( __CLASS__, 'shortcodeArgs' ), 10, 3 );
 			//add_filter( 'display_posts_shortcode_output', array( __CLASS__, 'addPostID' ), 10, 11 );
+			add_action( 'Easy_Plugins/Display_Posts/Post/Before', array( __CLASS__, 'addPostMeta' ), 10, 2 );
 		}
 
 		/**
@@ -265,6 +266,20 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 			$html = '<' . $inner_wrapper . ' class="' . implode( ' ', $class ) . '">' . $post_id_span . $loading . $image . $title . $date . $author . $category_display_text . $excerpt . $content . '</' . $inner_wrapper . '>';
 
 			return $html;
+		}
+
+		/**
+		 * @since 1.1
+		 *
+		 * @param Display_Posts $dp
+		 * @param Partials      $partial
+		 */
+		public static function addPostMeta( $dp, $partial ) {
+
+			$id = get_the_ID();
+
+			echo "<span class='dps-arm-post-meta' style='display: none;' data-post-id='{$id}'></span>";
+			echo '<span class="dps-arm-loading-overlay" style="display: none;"><div class="dps-arm-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></span>';
 		}
 
 		/**
