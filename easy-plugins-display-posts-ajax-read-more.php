@@ -102,7 +102,7 @@ if ( ! class_exists( 'Display_Posts_AJAX_Read_More' ) ) {
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueueScript' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'registerJavaScripts' ) );
 			add_filter( 'shortcode_atts_display-posts', array( __CLASS__, 'shortcodeArgs' ), 10, 3 );
-			add_filter( 'display_posts_shortcode_output', array( __CLASS__, 'addPostID' ), 10, 11 );
+			//add_filter( 'display_posts_shortcode_output', array( __CLASS__, 'addPostID' ), 10, 11 );
 		}
 
 		/**
